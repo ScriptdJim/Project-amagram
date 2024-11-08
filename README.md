@@ -11,25 +11,25 @@ Run these to check if the necessary installations have been installed.
 if there are any available profiles, choose one and begin step 2, If not begin step 1. 
 
 Step 1. Configure AWS (preferably adding a new profile for udacity) 
-# aws configure --profile amagram
+> aws configure --profile amagram
 
 Step 2. Create network infrastructure
-# ./create_net.sh --profile amagram
+> ./create_net.sh --profile amagram
 
 Step 3. Create server infrastructure
-# ./create_amagram.sh --profile amagram
+> ./create_amagram.sh --profile amagram
 // Once completed running, You should then see web page:  
 > "It works! Udagram, Udacity!"
 
 ## Tear down instructions
 TODO
 To delete the application infrastructure:
-# ./delete_udagram.sh --profile amagram
+> ./delete_udagram.sh --profile amagram
 
 To delete the network infrastructure:
-# ./delete_net.sh --profile amagram
-## Other considerations
+> ./delete_net.sh --profile amagram
 
+## Other considerations
 TODO (optional)
 I have some files in the Project solution directory:
 
