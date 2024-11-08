@@ -6,7 +6,7 @@ First off, you want to cd(change directory) into the correct directory.
 > cd Project-solution
 
 Run these to check if the necessary installations have been installed. 
-# view all existing profile names.
+// View all existing profile names.
 > aws configure list-profiles
 if there are any available profiles, choose one and begin step 2, If not begin step 1. 
 
