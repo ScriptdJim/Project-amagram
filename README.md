@@ -1,5 +1,5 @@
 # CD12352 - Infrastructure as Code Project Solution
-# [ Hello reader, is Abasiama .J. ]
+# [ Hello reader, name is Abasiama .J. ]
 
 ## Spin up instructions
 First off, you want to cd(change directory) into the correct directory.
