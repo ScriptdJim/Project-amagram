@@ -1,49 +1,50 @@
-# ND9991 - Course 2 - Infrastructure as Code
+# CD12352 - Infrastructure as Code Project Solution
+# [ Hello reader, is Abasiama .J. ]
 
-This repository contains the starter code for the final project of course 2 Infrastructure as Code in the Cloud DevOps Engineer Nanodegree.
+## Spin up instructions
+First off, you want to cd(change directory) into the correct directory.
+> cd Project-solution
 
-Please note that all supporting material for this course can be found in [this Github repository](https://github.com/udacity/cd12352-Deploy-Infrastructure-as-Code).
+Run these to check if the necessary installations have been installed. 
+# view all existing profile names.
+> aws configure list-profiles
+if there are any available profiles, choose one and begin step 2, If not begin step 1. 
 
-# Deploy a high-availability web app using CloudFormation
+Step 1. Configure AWS (preferably adding a new profile for udacity) 
+# aws configure --profile amagram
 
-In this project, you’ll deploy web servers for a highly available web app using CloudFormation. You will write the code that creates and deploys the infrastructure and application for an Instagram-like app from the ground up. You will begin with deploying the networking components, followed by servers, security roles and software.  The procedure you follow here will become part of your portfolio of cloud projects. You’ll do it exactly as it’s done on the job - following best practices and scripting as much as possible. 
+Step 2. Create network infrastructure
+# ./create_net.sh --profile amagram
 
-## Getting Started
+Step 3. Create server infrastructure
+# ./create_amagram.sh --profile amagram
+// Once completed running, You should then see web page:  
+> "It works! Udagram, Udacity!"
 
-### Dependencies
+## Tear down instructions
+TODO
+To delete the application infrastructure:
+# ./delete_udagram.sh --profile amagram
 
-1. AWS CLI installed and configured in your workspace using an AWS IAM role with Administrator permissions (as reviewed in the course).
+To delete the network infrastructure:
+# ./delete_net.sh --profile amagram
+## Other considerations
 
-2. Access to a diagram creator software of your choice.
+TODO (optional)
+I have some files in the Project solution directory:
 
-3. Your favorite IDE or text editor ready to work.
+# net.yml:
+// The network infrastructure also used by the create_net.sh and update_net.sh scripts.
+# net_params.json: 
+// The parameters for the network infrastructure.
+# amagram.yml 
+// The application resources.
+# amagram-params.json
+// The parameters for the application infrastructure.
+# amagram-bonus.yml
+// This is the solution to the bonus section of the assignment. 
+# update-amagram.yml
+// This is to update the infrastructure with an additional section to the basic already running stack. 
 
-### Installation
 
-You can get started by cloning this repo in your local workspace:
-
-```
-git clone git@github.com:udacity/-cd12352-Deploy-Infrastructure-as-Code-project.git
-```
-
-## Testing
-
-No tests required for this project.
-
-## Project Instructions
-
-1. Design your solution diagram using a tool of your choice and export it into an image file.
-
-2. Add all the CloudFormation networking resources and parameters to the `network.yml` and `network-parameters.json` files inside the `starter` folder of this repo.
-
-3. Add all the CloudFormation application resources and parameters to the `udagram.yml` and `udagram-parameters.json` files inside the `starter` folder of this repo.
-
-4. Create any required script files to automate spin up and tear down of the CloudFormation stacks.
-
-5. Update the README.md file in the `starter` folder with creation and deletion instructions, as well as any useful information regarding your solution.
-   
-6.  Submit your solution as a GitHub link or a zipped file containing the diagram image, CloudFormation yml and json files, automation scripts and README file.
-
-## License
-
-[License](LICENSE.txt)
+# Project-amagram
