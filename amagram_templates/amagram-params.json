@@ -1,0 +1,14 @@
+[
+    {
+        "ParameterKey": "EnvironmentName",
+        "ParameterValue": "amagramproject"
+    },
+	{
+		"ParameterKey": "S3BucketName",
+		"ParameterValue": "amagram-scriptd-bucket024"
+	},
+	{
+		"ParameterKey": "KeyPairName",
+		"ParameterValue": "MyKeyPair"
+	}
+]
